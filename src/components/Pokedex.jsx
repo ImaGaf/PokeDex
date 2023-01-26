@@ -6,7 +6,7 @@ import GetPokemons from './GetPokemons';
 import ByType from './ByType';
 import Header from './Header';
 
-const Pokedex = ({mainimage}) => {
+const Pokedex = ({mainimage, color}) => {
     const userName = useSelector(state => state.UserName);
     const navigate = useNavigate();
     const [pokemons,setPokemons] = useState({});
@@ -18,7 +18,6 @@ const Pokedex = ({mainimage}) => {
         axios.get(url)
         .then(res => setPokemons(res.data))
     }
-
 
     useEffect (()=>{
         getAllPokemons()
@@ -44,7 +43,7 @@ const Pokedex = ({mainimage}) => {
                 <ByType getByType = {getByType}/>
             </div>
             <button className='back' onClick={()=> navigate(-1)}>Back</button> 
-            <GetPokemons page={page} setPage={setPage} pokemons = {pokemons} setPokemons ={setPokemons}/>
+            <GetPokemons color={color} page={page} setPage={setPage} pokemons = {pokemons} setPokemons ={setPokemons}/>
         </div>
     );
 };

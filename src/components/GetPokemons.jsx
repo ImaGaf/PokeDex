@@ -4,7 +4,7 @@ import ByType from './ByType';
 import Pagination from './Pagination';
 import PokemonCard from './PokemonCard';
 
-const GetPokemons = ({pokemons,page,setPage}) => {
+const GetPokemons = ({pokemons,page,setPage, color}) => {
 
     const perPage = 20;
     const lastIndex = perPage*page;
@@ -55,7 +55,7 @@ const GetPokemons = ({pokemons,page,setPage}) => {
             <div className='cards-container'>
                 {
                     pokemonsToShow?.map((pokemon)=>(
-                        <PokemonCard url = {pokemon.url ? pokemon.url: pokemon.pokemon.url} key={pokemon.url ? pokemon.url: pokemon.pokemon.url}/>    
+                        <PokemonCard color={color} url = {pokemon.url ? pokemon.url: pokemon.pokemon.url} key={pokemon.url ? pokemon.url: pokemon.pokemon.url}/>    
                     ))
                 }
             </div>

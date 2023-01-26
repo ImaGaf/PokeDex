@@ -7,7 +7,7 @@ import Header from './Header';
 import Stats from './Stats';
 import Movements from './Movements';
 
-const Items = ({mainimage, Elipse}) => {
+const Items = ({mainimage, Elipse,color}) => {
     const userName = useSelector(state => state.UserName)
     const navigate = useNavigate()
     const {id} = useParams();
@@ -21,9 +21,9 @@ const Items = ({mainimage, Elipse}) => {
     return (
         <div className='items-container'>
             <Header mainimage={mainimage}/>
-            <div className='pokemon-container'>
-                <div className='item-header'>
-                    <img width={"250px"} src={pokemon.sprites?.other.dream_world.front_default} alt="" />
+            <div className='pokemon-container' >
+                <div className='item-header'  style={{background:`${color[pokemon?.types?.[0].type.name]?.back}`}}>
+                    <img height={"250px"} width={"250px"} src={pokemon.sprites?.other.dream_world.front_default} alt="" />
                 </div>
                 <div className='item-name'>
                     <span>#{pokemon.id}</span>

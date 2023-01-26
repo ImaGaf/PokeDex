@@ -130,6 +130,28 @@ body{
   border: 10px solid black;
 }
 
+.home-circle{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  border: 10px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: calc(50% - 50px);
+  bottom: 0%;
+}
+
+.home-circle-in{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(32, 32, 32);
+  border-radius: 50%;
+  border: 10px solid black;
+}
+
 .pokedex{
   position: relative;
   width: 100%;
@@ -228,10 +250,11 @@ body{
   background-color: gray;
   height: 380px;
   width: 260px;
+  border: 5px solid red;
 }
 
 .pokemon-data{
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 4px 4px;
   background-color: white;
   position: absolute;
   width: 100%;
@@ -392,7 +415,7 @@ body{
 }
 
 .item-info{
-  width: 70%;
+  width: 90%;
   display: flex;
   gap: 3rem;
   justify-content: center;
@@ -401,6 +424,11 @@ body{
 
 .types-container{
   margin: 2rem 0;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 350px;
 }
 
 .types{

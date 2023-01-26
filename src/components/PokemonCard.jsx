@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const PokemonCard = ({url}) => {
+const PokemonCard = ({url,color}) => {
     
     const [pokemon,setPokemon] = useState({})
     const navigate = useNavigate()
@@ -11,9 +11,17 @@ const PokemonCard = ({url}) => {
         axios.get(url)
         .then(res => setPokemon(res.data))
     },[])  
-    console.log(pokemon)
+    
+
+
     return (
-        <div className='card' onClick={()=>navigate(`/pokedex/${pokemon.id}`)}>
+        <div className='card' 
+        style={ 
+            { background:`${color[pokemon?.types?.[0].type.name]?.back}`, 
+            borderColor: `${color[pokemon?.types?.[0].type.name]?.color}`} } 
+            
+        onClick={()=>navigate(`/pokedex/${pokemon.id}`)}>
+
             <div className='pokemon-data'>
                 <h3>{pokemon.name}</h3> 
                 <p>{pokemon.types?.[0].type.name}{pokemon.types?.[1]?.type.name? "/":""}{pokemon.types?.[1]?.type.name}</p>

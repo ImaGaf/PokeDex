@@ -27,6 +27,10 @@ const Home = ({mainimage}) => {
             </div>
             <div className='footer'>
                 <div className='red'>
+                <div className='home-circle'>
+                            <div className='home-circle-in'>
+                            </div>
+                        </div>
                 </div>
                 <div className='black'>
                 </div>
