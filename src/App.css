@@ -97,7 +97,9 @@ body{
 
 /*Pokedex*/
 
-
+.header-all{
+  width: 100%;
+}
 
 .header-all > .red{
   padding-left: 3.5rem;
@@ -192,6 +194,13 @@ body{
 
 .back{
   position: absolute;
+  top: 15px;
+  right: 180px;
+  width: 90px;
+  height: 40px;
+  background-color: #DD1A1A;
+  border: none;
+  box-shadow: 0 0 6px 3px black;
 }
 
 .getPokemon{
@@ -296,3 +305,136 @@ body{
   cursor: pointer;
   background-color: #DD1A1A;
 }
+
+/*items*/
+
+.items-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-container{
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  margin: 7rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-header{
+  position: relative;
+  background-color: #92d7ea;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+} 
+.item-header > img{
+  position: absolute;
+  bottom: 5px;
+  right: calc(50% - 125px);
+}
+
+.item-name{
+  position: relative;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  border-bottom: 2px solid rgba(175, 172, 172, 0.769);
+}
+
+.item-name > span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 500;
+  width: 65px;
+  height: 50px;
+  padding: 2px 5px;
+  box-shadow: 0 0 1px 1px rgb(192, 192, 192);
+  margin-bottom: 3rem;
+}
+
+.item-name > p{
+  background-color: white;
+  font-weight: 500;
+  font-size: 40px;
+  position: absolute;
+  bottom: -20px;
+  padding: 0 1rem;
+}
+
+.height{
+  margin: 1rem 0;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.height > div > span{
+  color: #0F0F2D;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.height > div > p{
+  font-weight: 500;
+  color: #0F0F2D;
+  font-size: 25px;
+  margin-top: 0.5rem;
+}
+
+.item-info{
+  width: 70%;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.types-container{
+  margin: 2rem 0;
+}
+
+.types{
+  color: white;
+  background-color: #92d7ea;
+  padding: 0.5rem 2rem;
+  margin: 0 0.5rem;
+}
+
+.skill{
+  color: black;
+  box-shadow: 0 0 1px 1px rgb(174, 174, 174);
+  padding: 0.5rem 2rem;
+  margin: 0 0.5rem;
+}
+
+.item-back{
+  cursor: pointer;
+  color: black;
+  font-weight: 700;
+  position: fixed;
+  bottom: 50px;
+  right: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: #FE1936;
+  box-shadow: 0 0 6px 3px rgb(227, 146, 146);
+}
+
+.item-back:hover{
+  transform: scale(1.09);
+}
+
+
+
+

@@ -17,37 +17,37 @@ const Items = ({mainimage}) => {
     },[])  
     
     return (
-        <div>
+        <div className='items-container'>
             <Header mainimage={mainimage}/>
             <div className='pokemon-container'>
-                <div>
-                    <img width={"150px"} src={pokemon.sprites?.other.dream_world.front_default} alt="" />
+                <div className='item-header'>
+                    <img width={"250px"} src={pokemon.sprites?.other.dream_world.front_default} alt="" />
                 </div>
-                <div>
+                <div className='item-name'>
                     <span>#{pokemon.id}</span>
-                    {pokemon.name}
+                    <p>{pokemon.name}</p>
                 </div>
-                <div>
+                <div className='height'>
                     <div>
                         <span>Peso</span>
-                        <p>{pokemon.weigth}</p>
+                        <p>{pokemon.weight}</p>
                     </div>
                     <div>
                         <span>Altura</span>
                         <p>{pokemon.height}</p>
                     </div>
                 </div>
-                <div>
+                <div className='item-info'>
                     <div className='type'>
                         <div>
                             <span>Tipo</span>
                         </div>
-                        <div>
+                        <div className='types-container'>
                             { pokemon.types?.[0]?.type.name &&
-                             <span>{pokemon.types?.[0]?.type.name}</span>
+                             <span className='types'>{pokemon.types?.[0]?.type.name}</span>
                             }
                             {pokemon.types?.[1]?.type.name &&
-                                 <span>{pokemon.types?.[1]?.type.name}</span>
+                                 <span className='types'>{pokemon.types?.[1]?.type.name}</span>
                             }
                         </div>
                     </div>
@@ -55,10 +55,10 @@ const Items = ({mainimage}) => {
                             <div>
                                 <span>Habilidades</span>
                             </div>
-                            <div>
+                            <div className='types-container'>
                                 {
                                     pokemon.abilities?.map((skill) => (
-                                        <span key={skill.ability.url}>{skill.ability.name}</span>
+                                        <span className='skill' key={skill.ability.url}>{skill.ability.name}</span>
                                     ))
                                 }
                             </div>
@@ -67,7 +67,7 @@ const Items = ({mainimage}) => {
             </div>
  
             
-            <button onClick={()=>navigate(-1)}>Back</button>
+            <button className='item-back' onClick={()=>navigate(-1)}>Back</button>
         </div>
     );
 };
