@@ -10,7 +10,7 @@ import Elipse from './assets/Elipse.jpg';
 function App() {
 
   const color = {
-    normal: {back: "linear-gradient(181.51deg, #735259 0.92% #BC6B7C 47.96%, #7C3F4C 99.08%)", color: "#735259"},
+    normal: {back: "linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%)", color: "#735259"},
     fighting: {back: "linear-gradient(176.83deg, #96402A 0.92%, #F1613C 47.96%, #CB735D 99.08%)",color: "96402A" },
     flying: {back: "linear-gradient(177.56deg, #62DB60 0.92%, #3BB039 47.96%, #AAFFA8 99.08%)", color: "#62DB60"},
     poison: {back: "linear-gradient(177.03deg, #5B3184 0.92%, #A564E3 47.96%, #CE9BFF 99.08%)", color: " #5B3184"},
