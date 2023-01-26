@@ -4,8 +4,10 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
+import Stats from './Stats';
+import Movements from './Movements';
 
-const Items = ({mainimage}) => {
+const Items = ({mainimage, Elipse}) => {
     const userName = useSelector(state => state.UserName)
     const navigate = useNavigate()
     const {id} = useParams();
@@ -64,9 +66,9 @@ const Items = ({mainimage}) => {
                             </div>
                     </div>
                 </div>
+                <Stats pokemon={pokemon} Elipse={Elipse}/>   
             </div>
- 
-            
+            <Movements pokemon={pokemon} Elipse={Elipse}/>
             <button className='item-back' onClick={()=>navigate(-1)}>Back</button>
         </div>
     );

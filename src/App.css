@@ -317,7 +317,7 @@ body{
 }
 
 .pokemon-container{
-  width: 60%;
+  width: 70%;
   background-color: rgb(255, 255, 255);
   margin: 7rem 0 2rem 0;
   display: flex;
@@ -436,6 +436,92 @@ body{
   transform: scale(1.09);
 }
 
+.movements{
+  position: relative;
+  width: 70%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 3.5rem;
+}
 
+.movements > h1{
+  position: absolute;
+  top: 70px;
+  background-color: white;
+  padding-right: 2rem;
+}
+.movements > img{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 45px;
+  top: 40px;
+}
+
+.moves-container{
+  border-top: 1px solid rgba(128, 128, 128, 0.788) ;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  margin-top: 3rem;
+}
+
+.move{
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 0.7rem 1.5rem;
+}
+
+.stats{
+  position: relative;
+  border-top: 1px solid rgba(176, 176, 176, 0.863);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 0;
+  margin-top: 8rem;
+}
+
+.stats > h1{
+  position: absolute;
+  left: 0;
+  top: -25px;
+  background-color: white;
+  padding-right: 2rem;
+  color: #302F2F;
+}
+
+.stats > img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:-60px;
+  right: 0;
+}
+
+.stats-container{
+  width: 100%;
+}
+
+.stats-container > progress{
+  width: 100%;
+  height: 40px;
+}
+
+.stats-data{
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
+} 
+
+.stats-data > span{
+  font-size: 24px;
+  color: #302F2F;
+}
 
 
