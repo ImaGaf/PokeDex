@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 #root{
   height: 100vh;
 }
@@ -552,3 +551,53 @@ body{
 }
 
 
+@media screen and (max-width: 320px) {
+  .name-input > input{
+    width: 90vw;
+  }
+  .App{
+    width: 100%;
+    border: solid green;
+  }
+  .getPokemon{
+    display: none;
+  }
+  .pokedex{
+    border: solid red;
+  }
+
+  .greating{
+    font-size: 12px;
+    padding: 2rem 0 0 0.5rem;
+  }
+
+  .search-container{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    gap: 1rem;
+    border: solid green;
+  }
+
+  .selector{
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 472px) { 
+
+    .main-view > img{
+      width: 90vw;
+    }
+
+    .name-input > input{
+      margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 770px) { 
+
+  .main-view > img{
+    width: 90vw;
+  }
+}
